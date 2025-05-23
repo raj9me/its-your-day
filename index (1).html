@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Priyal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(to top right, #ffccff, #ffe6f0);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .message {
+            margin-top: 50px;
+            font-size: 1.5em;
+            color: #d63384;
+            padding: 20px;
+        }
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 50px;
+            height: 70px;
+            background-color: pink;
+            border-radius: 50% 50% 50% 50%;
+            animation: float 10s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-120vh); }
+        }
+        .gallery {
+            margin-top: 50px;
+            animation: slideDown 2s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes slideDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="message">
+    Thank you for everything and being such a good person to me. Hope you will always hona be same and lot more memories on the way, so have fun and keep smiling Priyal.🎀💗
+</div>
+
+<!-- Balloons -->
+<script>
+    function createBalloon() {
+        const balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.left = Math.random() * window.innerWidth + "px";
+        balloon.style.backgroundColor = ["#ff69b4", "#ffb6c1", "#ffc0cb", "#ffa07a"][Math.floor(Math.random() * 4)];
+        document.body.appendChild(balloon);
+        setTimeout(() => balloon.remove(), 10000);
+    }
+    setInterval(createBalloon, 500);
+</script>
+
+<!-- Photo Gallery -->
+<div class="gallery">
+    <img src="priyal_photo.jpg" alt="Priyal" style="max-width: 90%; height: auto; border: 5px solid #fff; box-shadow: 0 0 10px #ff69b4;">
+</div>
+
+</body>
+</html>
